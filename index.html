@@ -9,10 +9,10 @@
 <body>
     
 <header class="conteiner">
-    <a href="/"class="logo">
+    <a href="indexpokedex.html" class="logo">
         <img src="img/logo_pokedex.png" alt="Logo Pokedex">
     </a>
-    <form>
+    <form id="search-form">
             <div class="form-group">
                 <svg
                     xmlns="http://www.w3.org/2000/svg" 
@@ -31,13 +31,15 @@
                 <input
                     type="search"
                     placeholder="Buscar nombre de Pokemon"
+                    id="search-input"
                 />
             </div>
 
-            <button class="btn-search">Buscar</button>
+            <button type="button" id="btn-search" class="btn-search">Buscar</button>
         </form>
     </header>
 
+    
     <div class="container-filter container">
         <div class="icon-filter">
             <img src="img/1455554848_line-64_icon-icons.com_53332.svg" alt="Icono" class="icon">
@@ -46,7 +48,7 @@
     </div>
 
     <main class="card-list-pokemon container">
-        <a href="pokemon.html" class="card-pokemon">
+        <a href="indexpokedex.html" class="card-pokemon">
             <div class="card-img">
                 <img
                     src="https://assets.pokemon.com/assets/cms2/img/pokedex/detail/001.png"
@@ -63,7 +65,7 @@
             </div>
         </a>
 
-        <a href="pokemon.html" class="card-pokemon">
+        <a href="indexpokedex.html" class="card-pokemon">
             <div class="card-img">
                 <img
                     src="https://assets.pokemon.com/assets/cms2/img/pokedex/detail/002.png"
@@ -80,7 +82,7 @@
             </div>
         </a>
 
-        <a href="pokemon.html" class="card-pokemon">
+        <a href="indexpokedex.html" class="card-pokemon">
             <div class="card-img">
                 <img
                     src="https://assets.pokemon.com/assets/cms2/img/pokedex/detail/003.png"
@@ -97,7 +99,7 @@
             </div>
         </a>
 
-        <a href="pokemon.html" class="card-pokemon">
+        <a href="indexpokedex.html" class="card-pokemon">
             <div class="card-img">
                 <img
                     src="https://assets.pokemon.com/assets/cms2/img/pokedex/detail/004.png"
@@ -113,7 +115,7 @@
             </div>
         </a>
 
-        <a href="pokemon.html" class="card-pokemon">
+        <a href="indexpokedex.html" class="card-pokemon">
             <div class="card-img">
                 <img
                     src="https://assets.pokemon.com/assets/cms2/img/pokedex/detail/005.png"
@@ -129,7 +131,7 @@
             </div>
         </a>
 
-        <a href="pokemon.html" class="card-pokemon">
+        <a href="indexpokedex.html" class="card-pokemon">
             <div class="card-img">
                 <img
                     src="https://assets.pokemon.com/assets/cms2/img/pokedex/detail/006.png"
@@ -146,7 +148,7 @@
             </div>
         </a>
 
-        <a href="pokemon.html" class="card-pokemon">
+        <a href="indexpokedex.html" class="card-pokemon">
             <div class="card-img">
                 <img
                     src="https://assets.pokemon.com/assets/cms2/img/pokedex/detail/007.png"
@@ -162,7 +164,7 @@
             </div>
         </a>
 
-        <a href="pokemon.html" class="card-pokemon">
+        <a href="indexpokedex.html" class="card-pokemon">
             <div class="card-img">
                 <img
                     src="https://assets.pokemon.com/assets/cms2/img/pokedex/detail/008.png"
@@ -178,7 +180,7 @@
             </div>
         </a>
 
-        <a href="pokemon.html" class="card-pokemon">
+        <a href="indexpokedex.html" class="card-pokemon">
             <div class="card-img">
                 <img
                     src="https://assets.pokemon.com/assets/cms2/img/pokedex/detail/009.png"
@@ -194,7 +196,7 @@
             </div>
         </a>
 
-        <a href="pokemon.html" class="card-pokemon">
+        <a href="indexpokedex.html" class="card-pokemon">
             <div class="card-img">
                 <img
                     src="https://assets.pokemon.com/assets/cms2/img/pokedex/detail/010.png"
@@ -210,7 +212,7 @@
             </div>
         </a>
 
-        <a href="pokemon.html" class="card-pokemon">
+        <a href="indexpokedex.html" class="card-pokemon">
             <div class="card-img">
                 <img
                     src="https://assets.pokemon.com/assets/cms2/img/pokedex/detail/011.png"
@@ -226,7 +228,7 @@
             </div>
         </a>
 
-        <a href="pokemon.html" class="card-pokemon">
+        <a href="indexpokedex.html" class="card-pokemon">
             <div class="card-img">
                 <img
                     src="https://assets.pokemon.com/assets/cms2/img/pokedex/detail/012.png"
@@ -260,62 +262,17 @@
                 <input type="checkbox" name="bug" id="bug" />
                 <label for="bug">Bicho</label>
             </div>
-            <div class="group-type">
-                <input type="checkbox" name="fairy" id="fairy" />
-                <label for="fairy">Hada</label>
-            </div>
-            <div class="group-type">
-                <input type="checkbox" name="dragon" id="dragon" />
-                <label for="dragon">Dragón</label>
-            </div>
-            <div class="group-type">
-                <input type="checkbox" name="shadow" id="shadow" />
-                <label for="shadow">Fantasma</label>
-            </div>
-            <div class="group-type">
-                <input type="checkbox" name="ground" id="ground" />
-                <label for="ground">Tierra</label>
-            </div>
-            <div class="group-type">
-                <input type="checkbox" name="normal" id="normal" />
-                <label for="normal">Normal</label>
-            </div>
-            <div class="group-type">
-                <input type="checkbox" name="psychic" id="psychic" />
-                <label for="psychic">Psíquico</label>
-            </div>
-            <div class="group-type">
-                <input type="checkbox" name="steel" id="steel" />
-                <label for="steel">Acero</label>
-            </div>
-            <div class="group-type">
-                <input type="checkbox" name="dark" id="dark" />
-                <label for="dark">Siniestro</label>
-            </div>
-            <div class="group-type">
-                <input type="checkbox" name="electric" id="electric" />
-                <label for="electric">Eléctrico</label>
-            </div>
-            <div class="group-type">
-                <input type="checkbox" name="fighting" id="fighting" />
-                <label for="fighting">Lucha</label>
-            </div>
+            
             <div class="group-type">
                 <input type="checkbox" name="flying" id="flying" />
                 <label for="flying">Volador</label>
             </div>
-            <div class="group-type">
-                <input type="checkbox" name="ice" id="ice" />
-                <label for="ice">Hielo</label>
-            </div>
+           
             <div class="group-type">
                 <input type="checkbox" name="poison" id="poison" />
                 <label for="poison">Veneno</label>
             </div>
-            <div class="group-type">
-                <input type="checkbox" name="rock" id="rock" />
-                <label for="rock">Roca</label>
-            </div>
+          
             <div class="group-type">
                 <input type="checkbox" name="water" id="water" />
                 <label for="water">Agua</label>
