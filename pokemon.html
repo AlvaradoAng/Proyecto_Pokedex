@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Detalles del Pokémon</title>
+    <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+    <header class="container">
+        <a href="/" class="logo">
+            <img src="img/Pokédex_logo.png" alt="Logo Pokédex" />
+        </a>
+    </header>
+
+    <main class="container">
+        <div id="pokemon-info">
+            <!-- La información del Pokémon se cargará aquí -->
+        </div>
+    </main>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const urlParams = new URLSearchParams(window.location.search);
+            const pokemonId = urlParams.get('id');
+
+            // Aquí deberías cargar los detalles del Pokémon según el ID
+            // Este es un ejemplo básico con datos estáticos para ilustrar
+            const pokemonData = {
+                1: {
+                    name: 'Bulbasaur',
+                    height: '0.7m',
+                    weight: '6.9Kg',
+                    types: ['Planta'],
+                    img: 'https://assets.pokemon.com/assets/cms2/img/pokedex/detail/001.png'
+                }
+                // Puedes agregar más Pokémon aquí con su ID
+            };
+
+            const pokemon = pokemonData[pokemonId];
+
+            if (pokemon) {
+                const infoContainer = document.getElementById('pokemon-info');
+                infoContainer.innerHTML = `
+                    <div class="header-main-pokemon">
+                        <span class="number-pokemon">#${pokemonId}</span>
+                        <div class="container-img-pokemon">
+                            <img src="${pokemon.img}" alt="${pokemon.name}" />
+                        </div>
+                        <div class="container-info-pokemon">
+                            <h1>${pokemon.name}</h1>
+                            <div class="card-types">
+                                ${pokemon.types.map(type => `<span class="${type.toLowerCase()}">${type}</span>`).join('')}
+                            </div>
+                            <div class="info-pokemon">
+                                <div class="group-info">
+                                    <p>Altura</p>
+                                    <span>${pokemon.height}</span>
+                                </div>
+                                <div class="group-info">
+                                    <p>Peso</p>
+                                    <span>${pokemon.weight}</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                `;
+            } else {
+                // Manejar el caso en que el Pokémon no existe
+                document.getElementById('pokemon-info').innerHTML = '<p>Pokémon no encontrado.</p>';
+            }
+        });
+    </script>
+</body>
+</html>
